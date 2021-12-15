@@ -1,0 +1,46 @@
+OS Questions
+What is the PID? - Process ID??
+Parsing: Break input at spaces (then match first word, exec/globalusage/quit)
+
+
+Exec -> Is there a list of executable files?
+Need to create a format for the text input (i.e. exec command1 -command2)
+<How to find and run files>
+
+Gloablusage
+Returns version details 
+Are these hardcoded?
+
+> Modifier
+Writes output into a text file provided after the > symbol (> example.txt)
+Creates the file if it does not exist.
+<How to write text files>
+
+#########################################################################
+Max
+Quit
+Check for running processes, quit if none are running.
+Otherwise return
+Line 1: The following processes are running, are you sure you want to quit?
+Middle: List of running processes
+User input [Y/n]
+If Y: Stop all processes and quit
+If n: cancel the quit command
+<Need to keep track of threads from & command>
+
+& Operator
+Runs command on a new thread/pipe/fork(?)
+(Call fuction in exec command)
+<How to start a new thread/pipe/fork>
+#########################################################################
+
+Basic Program:
+1. Global Usage
+2. & + > working with global usage
+3. Write to file with C
+4. Run executable programs
+
+Next Meeting Sunday at 11
+
+We should start off all trying to create a global usage function to get familiar with C. 
+Then at the next meeting assign tasks.
