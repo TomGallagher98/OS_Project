@@ -14,7 +14,9 @@ int main() {
 
     char* cmd = (char*)malloc(255*sizeof(char));
 
-    char args[10][10] = {};
+    char* qa = (char*)malloc(5*sizeof(char));
+
+    char args[10][30] = {};
 
     while (1) {
         printf("%s@%s> ", user, host);
@@ -26,9 +28,18 @@ int main() {
             arg = strtok(NULL, " ");
             i++;
         }
-        for (int i = 0; i < 1; ++i) {
-            printf("%s ", args[i]);
-
+        if (strcmp(args[0],"globalusage") == 0) {
+            printf("IMCSH Version 1.0 created by Tom Gallagher, Dennis Waswa Simiyu, Maximilian Mandel\n");
+        }
+        else if (strcmp(args[0], "quit") == 0) {
+            printf("The following processes are running, are you sure you want to quit? [Y/n] ");
+            //List all running processes
+            scanf("%s", qa);
+            if (strcmp(qa, "Y") == 0) {
+                exit(0);
+            }
+            else if (strcmp(qa, "n") == 0) {
+            }
         }
     }
 }
