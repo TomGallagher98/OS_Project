@@ -59,7 +59,6 @@ int main() {
                     break;                   //
                 }                            //
             }                                //
-            printf("%s", args[le]);
             if (strcmp(args[le], "&") == 0) { //Check if "&" modifier has been input
                 pid_t pid = fork();
 
