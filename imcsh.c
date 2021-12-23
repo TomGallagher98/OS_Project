@@ -59,22 +59,18 @@ int main() {
                     break;                   //
                 }                            //
             }                                //
-
-            if (args[le] == "") {
-                le = le - 1;
-            }
-
-            if (strcmp(args[le], "&")) { //Check if "&" modifier has been input
+            printf("%s", args[le]);
+            if (strcmp(args[le], "&") == 0) { //Check if "&" modifier has been input
                 pid_t pid = fork();
 
-                if (pid < 0) {
+                if (pid < 0) { //Check if fork failed
                     fprintf(stderr, "Fork failed");
                 }
-                else if (pid == 0) {
-
+                else if (pid == 0) { //Check if pid is 0 (child process)
+                    execv(args[0], args);
                 }
                 else {
-                    
+                    printf("Executing %d in the background\n", pid); //Print background execution message
                 }
             }
             else {
